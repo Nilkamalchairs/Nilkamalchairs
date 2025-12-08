@@ -1,39 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nilkamal Plastic Chairs</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nilkamal Plastic Chairs</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* Horizontal Scroll Slider (No Tailwind) */
+    .slider-container {
+      display: flex;
+      gap: 16px;
+      overflow-x: auto;
+      padding: 16px 0;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+    }
+    .slider-container::-webkit-scrollbar {
+      display: none;
+    }
+    .slider-image {
+      height: 220px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      flex-shrink: 0;
+    }
+  </style>
 </head>
-
 <body class="bg-gray-50 text-gray-800">
+  <!-- Header -->
+  <header class="bg-white shadow p-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-blue-700">Nilkamal Plastic Chairs</h1>
+    <nav class="space-x-4">
+      <a href="#products" class="hover:text-blue-600 font-medium">Products</a>
+      <a href="#contact" class="hover:text-blue-600 font-medium">Contact</a>
+    </nav>
+  </header>
 
-    <!-- NAVBAR -->
-    <header class="bg-white shadow">
-        <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
-            <h1 class="text-2xl font-bold text-blue-600">Nilkamal Chairs</h1>
-            <nav class="hidden md:flex space-x-6 text-gray-600 font-medium">
-                <a href="#features" class="hover:text-blue-600">Features</a>
-                <a href="#products" class="hover:text-blue-600">Products</a>
-                <a href="#reviews" class="hover:text-blue-600">Reviews</a>
-                <a href="#contact" class="hover:text-blue-600">Contact</a>
-            </nav>
-        </div>
-    </header>
+  <!-- Hero Section -->
+  <section class="px-6 py-12 text-center bg-white">
+    <h2 class="text-4xl font-bold mb-4">Premium Nilkamal Plastic Chairs</h2>
+    <p class="text-lg mb-6">Durable, stylish, and comfortable chairs for every home & office.</p>
+    <button class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700">Shop Now</button>
+  </section>
 
-    <!-- HERO SECTION -->
-    <section class="max-w-7xl mx-auto px-4 py-16 flex flex-col md:flex-row items-center">
-        <div class="flex-1 mb-10 md:mb-0">
-            <h2 class="text-4xl md:text-5xl font-bold text-blue-700 leading-tight">
-                Premium Nilkamal <br />
-                <span class="text-blue-500">Plastic Chairs</span>
-            </h2>
-            <p class="text-gray-600 mt-4 text-lg">
-                Strong, durable, stylish & perfect for home, office and outdoor use.
-            </p>
-            <button class="mt-6 px-8 py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition">
-                Shop Now
+  <!-- Horizontal Scroll Image Slider (No Tailwind Used) -->
+  <section id="products" class="px-6 py-10 bg-gray-100">
+    <h3 class="text-3xl font-semibold mb-4">Hero Products / Top Selling</h3>
+
+    <div class="slider-container">
+      <img src="https://www.nilkamalfurniture.com/cdn/shop/files/Marble_Beige.webp?v=175342841" class="slider-image" />
+      <img src="https://www.nilkamalfurniture.com/cdn/shop/products/lifestyle03_4e63a826-6138-460e-a29b-030d06e13753.jpg?v=1694598471" class="slider-image" />
+      <img src="https://5.imimg.com/data5/ANDROID/Default/2024/10/461106801/IJ/MC/JM/194891318/product-jpeg-500x500.jpg" class="slider-image" />
+      <img src="https://www.nilkamalfurniture.com/cdn/shop/products/K2CHR2209MBG.jpg?v=1660978086&width=1080" class="slider-image" />
+      <img src="https://www.nilkamalfurniture.com/cdn/shop/files/MYSTIQUESRB_514b27a5-e25d-4faf-91a7-f358651bc589.webp?v=1753427209" class="slider-image" />
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="bg-white p-6 text-center border-t">
+    <p class="text-lg font-medium">Contact Us</p>
+    <p>Email: support@nilkamal.com</p>
+    <p class="mt-4 text-sm text-gray-600">© 2025 Nilkamal. All rights reserved.</p>
+  </footer>
+</body>
+</html>
             </button>
         </div>
 
